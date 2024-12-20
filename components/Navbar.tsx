@@ -25,7 +25,7 @@ export function Navbar() {
           <img 
             src="/logo.png" 
             alt="EmpowerU Logo" 
-            className="h-10 md:h-12 w-auto"
+            className="h-14 md:h-14 w-auto"
           />
         </Link>
 
