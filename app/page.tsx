@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from 'next/image'
-import { Navbar } from "@/components/Navbar"
-import { Footer } from "@/components/Footer"
-import HeroSection from '@/components/home-hero'
+
+
+import HeroSection from '../components/home-hero'
+import { Footer } from '../components/Footer'
+import { Navbar } from '../components/Navbar'
 
 export default function Home() {
   return (
