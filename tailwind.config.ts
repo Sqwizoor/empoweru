@@ -11,8 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+		border: '#d1d5db', 
       },
     },
   },
   plugins: [],
 } satisfies Config;
+
+
