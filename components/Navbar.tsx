@@ -18,7 +18,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 py-[1rem] right-0 z-50 bg-background/80 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 py-[1rem] right-0 z-50 bg-white">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
