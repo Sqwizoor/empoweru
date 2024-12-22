@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <main>
-        <section className="flex items-center justify-center bg-gradient-to-br from-primary/20 to-secondary/20 pt-8 text-center">
+        <section className="flex items-center justify-center  pt-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
