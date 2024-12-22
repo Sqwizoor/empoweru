@@ -19,7 +19,7 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 py-[1rem] right-0 z-50 bg-white bg-slate-200">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="fixed bg-white mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <img 
