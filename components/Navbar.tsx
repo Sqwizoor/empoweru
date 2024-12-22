@@ -18,8 +18,8 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 py-[1rem] right-0 z-50 bg-white">
-      <div className="fixed bg-white mx-auto px-4 py-4 flex justify-between items-center w-full">
+    <nav className="fixed top-0 left-0 py-[1rem] right-0 z-50 bg-white flex flex-wrap">
+      <div className="bg-white mx-auto px-4 py-4 flex justify-between items-center w-full">
         {/* Logo */}
         <Link href="/">
           <img 
@@ -51,14 +51,14 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white"
+            className="md:hidden bg-white absolute top-full left-0 right-0 shadow-md"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link 
                   key={item.href} 
                   href={item.href} 
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors text-[18px]"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

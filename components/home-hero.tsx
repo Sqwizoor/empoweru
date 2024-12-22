@@ -19,16 +19,16 @@ export default function HeroSection() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80 -z-10"></div>
+      <div className="absolute inset-0 bg-black/60 -z-10"></div>
 
       {/* Content */}
       <motion.div
-        className="h-full flex flex-col items-center pt-[2rem] justify-center text-center text-white px-4"
+        className="h-full flex flex-col items-center pt-[2rem] justify-center text-center text-white md:px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-3xl md:text-4xl font-extrabold mb-4">
+        <h1 className="text-2xl md:text-4xl font-extrabold mb-4">
           Empower U Community Development Institute
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-2xl">
