@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[60vh] md:h-[80vh] w-full">
+    <section className="relative h-[70vh] md:h-[80vh] w-full">
       {/* Background Image */}
       <Image
         src="/hero3.jpg" // Replace with your image path
@@ -28,7 +28,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-2xl md:text-4xl font-extrabold mb-4">
+        <h1 className="text-2xl md:text-4xl font-extrabold pt-3 my-4">
           Empower U Community Development Institute
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-2xl">
