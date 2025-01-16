@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Twitter, Instagram, Phone } from 'lucide-react'
+import { Facebook, Twitter, Instagram, PhoneIcon as Whatsapp } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -14,16 +14,9 @@ export function Footer() {
                 <Facebook />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
-                <Twitter />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="hover:text-accent transition-colors">
-                <Instagram />
-                <span className="sr-only">Instagram</span>
-              </a>
+              
               <a href="https://www.whatsapp.com/channel/0029Vakml9B1SWt22hVJXk2O" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                <Phone />
+                <Whatsapp />
                 <span className="sr-only">WhatsApp</span>
               </a>
             </div>
