@@ -22,7 +22,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-lg sm:text-xl mb-8">Fostering sustainable growth and development within communities</p>
+            <p className="text-lg sm:text-xl mb-4">Fostering sustainable growth and development within communities</p>
           </motion.div>
         </section>
 
@@ -32,7 +32,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-3xl sm:text-4xl font-bold mb-8 text-center"
+              className="text-2xl sm:text-4xl font-bold mb-8 text-center"
             >
               About Us
             </motion.h2>

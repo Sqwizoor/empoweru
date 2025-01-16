@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[70vh] md:h-[90vh] w-full">
+    <section className="relative h-[50vh] md:h-[70vh] w-full">
       {/* Background Image */}
       <Image
         src="/hero3.jpg" // Replace with your image path
@@ -35,7 +35,7 @@ export default function HeroSection() {
           Empowering youth and fostering sustainable community growth through
           education, training, and development.
         </p>
-        <Button size="lg" className="bg-primary hover:bg-primary/80" asChild>
+        <Button size="lg" className="bg-blue-800" asChild>
           <Link href="#about">Learn More</Link>
         </Button>
       </motion.div>
