@@ -21,7 +21,7 @@ export default async function Home() {
   return (
     <main className="container mx-auto  mt-[6rem] px-4 py-8">
     <Navbar/>
-      <h1 className="text-4xl font-bold mb-8 text-center">FreshMark News</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">EmpowerU Blog</h1>
       <BlogList posts={posts} />
     </main>
   )
