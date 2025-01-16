@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Twitter, Instagram } from 'lucide-react'
+import { Facebook, Twitter, Instagram, Phone } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -10,9 +10,22 @@ export function Footer() {
             <h3 className="text-xl font-bold mb-4">EmpowerU</h3>
             <p className="mb-4">Fostering sustainable growth and development within communities.</p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-accent transition-colors"><Facebook /></a>
-              <a href="#" className="hover:text-accent transition-colors"><Twitter /></a>
-              <a href="#" className="hover:text-accent transition-colors"><Instagram /></a>
+              <a href="https://web.facebook.com/people/EmpowerU-Community-Development-Institute/100092232470725/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Facebook />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="#" className="hover:text-accent transition-colors">
+                <Twitter />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a href="#" className="hover:text-accent transition-colors">
+                <Instagram />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="https://www.whatsapp.com/channel/0029Vakml9B1SWt22hVJXk2O" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <Phone />
+                <span className="sr-only">WhatsApp</span>
+              </a>
             </div>
           </div>
           <div>
