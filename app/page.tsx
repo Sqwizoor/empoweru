@@ -22,7 +22,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-lg sm:text-xl mb-4">Fostering sustainable growth and development within communities</p>
+            <p className="text-lg sm:text-2xl mb-1">Fostering sustainable growth and development within communities</p>
           </motion.div>
         </section>
 

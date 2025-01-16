@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[50vh] md:h-[70vh] w-full">
+    <section className="relative h-[60vh] md:h-[80vh] w-full">
       {/* Background Image */}
       <Image
         src="/hero3.jpg" // Replace with your image path
