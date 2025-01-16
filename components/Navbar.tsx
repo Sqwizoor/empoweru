@@ -11,14 +11,14 @@ const navItems = [
   { href: '#about', label: 'About' },
   { href: '#programs', label: 'Programs' },
   { href: '#achievements', label: 'Achievements' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/post', label: 'Blog' },
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 py-[1rem] right-0 z-50 bg-white flex flex-wrap">
+    <nav className="fixed top-0 left-0 py-[1rem] md:px-[5rem] right-0 z-50 bg-white flex flex-wrap">
       <div className="bg-white mx-auto px-4 py-4 flex justify-between items-center w-full">
         {/* Logo */}
         <Link href="/">
