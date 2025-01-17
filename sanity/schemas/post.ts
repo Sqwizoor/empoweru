@@ -1,53 +1,80 @@
-import { Rule } from "sanity";
+import { defineField, defineType } from 'sanity'
 
-export const post = {
-  name: "post",
-  title: "Post",
-  type: "document",
-
+export default defineType({
+  name: 'post',
+  title: 'Post',
+  type: 'document',
   fields: [
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
-      validation: (Rule: Rule) => Rule.required().error("Required"),
-    },
-    {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: { source: "title" },
-      validation: (Rule: Rule) => Rule.required().error("Required"),
-    },
-    {
-      name: "publishedAt",
-      title: "Published at",
-      type: "datetime",
-      initialValue: () => new Date().toISOString(),
-    },
-    {
-      name: "excerpt",
-      title: "Excerpt",
-      type: "text",
-      validation: (Rule: Rule) => Rule.max(200).error("Max 200 characters"),
-    },
-    {
-      name: "body",
-      title: "Body",
-      type: "array",
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    }),
+    defineField({
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: { type: 'author' },
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'category' } }],
+    }),
+    defineField({
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'array',
       of: [
-        { type: "block" },
+        { type: 'block' },
         {
-          type: "image",
-          fields: [{ type: "text", name: "alt", title: "Alt" }],
+          type: 'image',
+          fields: [
+            {
+              type: 'text',
+              name: 'alt',
+              title: 'Alternative text',
+              description: 'Important for SEO and accessibility.',
+            },
+          ],
         },
       ],
-    },
-    {
-      name: "tags",
-      title: "Tags",
-      type: "array",
-      of: [{ type: "reference", to: [{ type: "tag" }] }],
-    },
+    }),
   ],
-};
+
+  preview: {
+    select: {
+      title: 'title',
+      author: 'author.name',
+      media: 'mainImage',
+    },
+    prepare(selection) {
+      const { author } = selection
+      return { ...selection, subtitle: author && `by ${author}` }
+    },
+  },
+})
+
