@@ -1,7 +1,7 @@
-import { client } from '../../../lib/sanity.client'
+import { client } from '@/sanity/lib/client'
 import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
-import { urlForImage } from '../../../lib/sanity.image'
+import { urlForImage } from '@/sanity/lib/sanity.image'
 import { notFound } from 'next/navigation'
 import { Navbar } from '@/components/Navbar'
 

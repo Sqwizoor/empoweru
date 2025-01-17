@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { urlForImage } from '@/lib/sanity.image'
+import { urlForImage } from '@/sanity/lib/sanity.image'
 
 export default function BlogList({ posts }: { posts: any[] }) {
   return (

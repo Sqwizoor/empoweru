@@ -1,7 +1,8 @@
 
 import { Navbar } from '@/components/Navbar'
-import { client } from '../../lib/sanity.client'
+
 import BlogList from '../components/BlogList'
+import { client } from '@/sanity/lib/client'
 
 async function getPosts() {
   const posts = await client.fetch(`*[_type == "post"] | order(publishedAt desc) {
