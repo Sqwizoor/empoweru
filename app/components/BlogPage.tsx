@@ -1,6 +1,7 @@
 
 
-import { client } from '../../lib/sanity.client'
+
+import { client } from '@/sanity/lib/client'
 import BlogList from '../components/BlogList'
 
 async function getPosts() {
